@@ -204,7 +204,7 @@ con nuestra busqueda ya que, de las palabras claves seleccionadas de las cuales 
 \section{RESULTADOS DEL ANALISIS}
 
 El query resultante de todos estos filtros:
-TITLE-ABS-KEY ( face AND detection AND fraud )
+TITLE-ABS-KEY ( face AND detection)
 AND ( LIMIT-TO ( SUBJAREA , C¸ OMP”) OR LIMIT-TO (
 SUBJAREA , .ENGI”) OR LIMIT-TO ( SUBJAREA , ”MATH”)
 ) AND ( LIMIT-TO ( DOCTYPE , c¸p”) OR LIMIT-TO (
@@ -217,7 +217,7 @@ LIMIT-TO ( DOCTYPE , c¸h”) ) AND ( LIMIT-TO ( LANGUAGE , .English”) ) AND (
 en este apartado mostaremos los resultados de los diferentes periodos de tiempo y analisaremos sus diferencias
 
 \subsection{analisis incial}
-al hacer la consulta incial pero limitando los periodos de tiempo, cada uno de 5 años, podremos observar los resultados de cada uno de ellos a continuacion
+Al realizar la consulta inicial, pero limitando los periodos de tiempo a intervalos de 5 años, podremos observar los resultados específicos de cada uno de estos períodos a continuación.
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{resultados 2013.png}
@@ -346,7 +346,31 @@ Algunos títulos relevantes fueron:
     \caption{resultados 2019 a 2024}
     \label{fig:enter-label}
 \end{figure}
+\section{Mapas de Categorías Gramaticales}
+En esta sección, realizaremos un análisis de la estructura gramatical presente en los resúmenes (abstracts) y los títulos de los documentos. Para este propósito, hemos seleccionado el período de tiempo comprendido entre 2019 y 2024. A fin de garantizar la precisión y confiabilidad del análisis, utilizamos la biblioteca Spacy. Esta herramienta nos permite desglosar y etiquetar las palabras en las frases de manera más exhaustiva, lo que facilita la identificación de patrones gramaticales y tendencias en los textos. Así, obtendremos una comprensión más profunda de cómo se estructuran lingüísticamente los resúmenes y títulos dentro de nuestro conjunto de datos.
+\subsection{Frecuencia de categorias gramaticales en los titulos}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{mapaTitulos.png}
+    \caption{Enter Caption}
+    \label{fig:enter-label}
+\end{figure}
 
+La gráfica es un histograma de barras titulado “Frecuencia de Categorías Gramaticales en los Títulos”.
+En el eje x, se encuentran diferentes categorías gramaticales, como sustantivos propios (PROPN), adjetivos (ADJ), puntuación (PUNCT), preposiciones (ADP), verbos auxiliares (AUX), conjunciones coordinantes (CCONJ), determinantes (DET), números (NUM), partículas (PART), pronombres (PRON), conjunciones subordinantes (SCONJ), símbolos (SYM) y otras categorías abreviadas de manera similar.
+El eje y representa la frecuencia, con valores que van desde 0 hasta 80000 en incrementos de 10000.
+La categoría gramatical más frecuente es “PROPN” (sustantivos propios), con una frecuencia cercana a 80000. Esto indica que los sustantivos propios son la categoría más común en los títulos de este conjunto de datos. Las demás categorías tienen frecuencias significativamente más bajas.
+\subsection{Frecuencia de categorias gramaticales en los abstracts}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{mapaabstract.png}
+    \caption{Enter Caption}
+    \label{fig:enter-label}
+\end{figure}
+La gráfica muestra un histograma de barras titulado “Frecuencia de Categorías Gramaticales en los Abstracts”.
+En el eje x, se encuentran diferentes categorías gramaticales, como pronombres (PRON), sustantivos (NOUN), adjetivos (ADJ), puntuación (PUNCT), verbos (VERB), determinantes (DET), preposiciones (ADP), números (NUM), conjunciones (CONJ), adverbios (ADV) y símbolos (SYM).
+El eje y representa la frecuencia, con valores que van desde 0 hasta 1e6 en incrementos.
+La categoría gramatical más frecuente en los abstracts es “PRON” (pronombre), lo que indica que los pronombres son ampliamente utilizados en este tipo de texto. Las demás categorías tienen frecuencias más bajas.
 
 \section{conclusiones}
 
